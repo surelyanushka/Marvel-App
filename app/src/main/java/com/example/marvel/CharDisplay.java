@@ -42,13 +42,7 @@ public class CharDisplay extends AppCompatActivity implements CharAdapter.OnItem
     final String HASH = "70912f9f478ea4f3bf334ef9b8c7099c";
    private ArrayList<CharItemList> list ;
 
-//    public static List<CharItemList> getCharItemList(){
-//        return list;
-//    }
 
-//    public static List<String> getImages() {
-//        return images;
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +65,7 @@ public class CharDisplay extends AppCompatActivity implements CharAdapter.OnItem
         parseJson();
     }
 
+
     private void parseJson(){
         Call<CharacterFile> call = placeHolderAPI.loadCharacters(1, "b14e1f60f4249d5f64ea428ddfdf1dc3", "70912f9f478ea4f3bf334ef9b8c7099c");
         call.enqueue(new Callback<CharacterFile>() {
@@ -79,6 +74,7 @@ public class CharDisplay extends AppCompatActivity implements CharAdapter.OnItem
 
                 if (!response.isSuccessful()) {
                     String x = String.valueOf(response.code());
+//                    Toast.makeText(CharDisplay.this,x, Toast.LENGTH_SHORT).show();
                     Log.i("HELLLO", x);
                 } else {
                     String Desc = "";

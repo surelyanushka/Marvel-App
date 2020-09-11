@@ -49,7 +49,6 @@ public class CharAdapter extends RecyclerView.Adapter<CharAdapter.ViewHolder> {
 
 //        items = CharDisplay.getCharItemList();
 //        CharItemList x = items.get(1);
-
 //        newimages = CharDisplay.getImages();
 
         final CharItemList item = cList.get(position);

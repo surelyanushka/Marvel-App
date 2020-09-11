@@ -14,3 +14,6 @@ public interface ApiInterface {
     @GET("comics")
     Call<ComicFile> loadComics(@Query("ts") int ts, @Query("apikey") String apikey, @Query("hash") String Hash);
 }
+
+
+//Test
